@@ -329,6 +329,9 @@ namespace BtcAddress.Forms {
 
         }
 
+		private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e) {
+		}
+
         private void menuStrip1_MouseMove(object sender, MouseEventArgs e) {
             ExtraEntropy.AddExtraEntropy(DateTime.Now.Ticks.ToString() + e.X + "," + e.Y);
         }

@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{181BD377-3659-411E-95D4-38CE93D0C974}</ProjectGuid>
+    <ProjectGuid>{281BD377-3659-411E-95D4-18CE93D0C974}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BtcAddress</RootNamespace>
-    <AssemblyName>BtcAddress</AssemblyName>
+    <AssemblyName>GrsAddress</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
