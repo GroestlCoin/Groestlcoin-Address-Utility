@@ -59,8 +59,8 @@ namespace BtcAddress {
             int printWidth;
             int leftMargin;
             int rightMargin;
-            Int32 lines;
-            Int32 chars;
+//            Int32 lines;
+//            Int32 chars;
 
             //Set print area size and margins
             {

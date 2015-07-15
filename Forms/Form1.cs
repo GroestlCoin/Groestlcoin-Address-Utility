@@ -323,7 +323,9 @@ namespace BtcAddress {
 
         private void btnBlockExplorer_Click(object sender, EventArgs e) {
             try {
-                if (cboCoinType.Text == "Testnet") {
+				if (cboCoinType.Text == "Groestlcoin") {
+					Process.Start("https://chainz.cryptoid.info/grs/address.dws?" + txtBtcAddr.Text);
+				} else if (cboCoinType.Text == "Testnet") {
                     Process.Start("http://www.blockexplorer.com/testnet/address/" + txtBtcAddr.Text);
                 } else if (cboCoinType.Text == "Namecoin") {
                     Process.Start("http://explorer.dot-bit.org/a/" + txtBtcAddr.Text);
@@ -397,7 +399,8 @@ namespace BtcAddress {
             get {
                 string cointype = cboCoinType.SelectedText.ToLowerInvariant();
                 switch (cointype) {
-                    case "bitcoin": return 0;
+					case "groestlcoin": return 36;
+					case "bitcoin": return 0;
                     case "namecoin": return 52;
                     case "testnet": return 111;
                     case "litecoin": return 48;
@@ -514,7 +517,6 @@ namespace BtcAddress {
 
 
             SecureRandom sr = new SecureRandom();
-            int dec = 0;
 
             List<string> myaddresses = new List<string>();
             Dictionary<string, string> myprivkeys = new Dictionary<string, string>();
@@ -580,6 +582,7 @@ namespace BtcAddress {
 
         private void label4_Click(object sender, EventArgs e) {
             return;
+			/*
             int Records=0;
             int LineNumber = 1;
             using (StreamReader sr1 = new StreamReader("privkeys3.txt")) {
@@ -603,7 +606,7 @@ namespace BtcAddress {
                     }
                 }
             }
-            MessageBox.Show("Successfully validated " + Records + " records.");
+            MessageBox.Show("Successfully validated " + Records + " records.");*/
         }
 
         private void label3_Click(object sender, EventArgs e) {
@@ -611,7 +614,7 @@ namespace BtcAddress {
             
 
 
-            
+            /*
             // * CODE TO BREAK PRIVATE KEYS OUT OF WALLET.DAT
             using (FileStream sr = new FileStream("wallet.dat",FileMode.Open)) {
                 byte[] b = new byte[4000000];
@@ -628,7 +631,7 @@ namespace BtcAddress {
                         Debug.WriteLine("./bitcoind importprivkey " + Util.ByteArrayToBase58Check(privkey));
                     }
                 }
-            }
+            }*/
              
         }
 

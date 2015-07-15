@@ -331,7 +331,7 @@ namespace Casascius.Bitcoin {
             
             string notvalid = "Not a valid Payment Invitation Code";
             string notvalid2 = "Code is not a valid Payment Invitation Code or may have a typo or other error.";
-            string notvalid3 = "The Payment Invitation does not belong to the provided Escrow Invitation.";
+//            string notvalid3 = "The Payment Invitation does not belong to the provided Escrow Invitation.";
 
             long headp;
             byte[] invbytesp;

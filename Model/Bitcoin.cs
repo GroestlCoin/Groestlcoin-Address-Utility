@@ -30,6 +30,8 @@ using Org.BouncyCastle.Crypto.Parameters;
 using Org.BouncyCastle.Security;
 using Org.BouncyCastle.Math.EC;
 
+using Coin;
+
 namespace Casascius.Bitcoin {
     public class Util {
         public static string PassphraseToPrivHex(string passphrase) {
@@ -40,12 +42,7 @@ namespace Casascius.Bitcoin {
 
             byte[] bb = new byte[ba.Length + 4];
             Array.Copy(ba, bb, ba.Length);
-            Sha256Digest bcsha256a = new Sha256Digest();
-            bcsha256a.BlockUpdate(ba, 0, ba.Length);
-            byte[] thehash = new byte[32];
-            bcsha256a.DoFinal(thehash, 0);
-            bcsha256a.BlockUpdate(thehash, 0, 32);
-            bcsha256a.DoFinal(thehash, 0);
+			byte[] thehash = Global.HashForAddress(ba);
             for (int i = 0; i < 4; i++) bb[ba.Length + i] = thehash[i];
             return Base58.FromByteArray(bb);
         }
