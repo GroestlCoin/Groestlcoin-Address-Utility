@@ -59,7 +59,7 @@ namespace Casascius.Bitcoin {
         /// Creates a new random key pair, using a user-provided string to add entropy to the
         /// SecureRandom generator provided by the .NET Framework.
         /// </summary>
-        public static KeyPair Create(string usersalt, bool compressed=false, byte addressType = 0) {
+        public static KeyPair Create(string usersalt, bool compressed=false, byte addressType = 36) { //GRS
             if (usersalt == null) usersalt = "ok, whatever";
             usersalt += DateTime.UtcNow.Ticks.ToString();
 
@@ -82,7 +82,7 @@ namespace Casascius.Bitcoin {
         /// Generates a KeyPair using a BigInteger as a private key.
         /// BigInteger is checked for appropriate range.
         /// </summary>
-        public KeyPair(BigInteger bi, bool compressed = false, byte addressType = 0) {
+        public KeyPair(BigInteger bi, bool compressed = false, byte addressType = 36) {	//GRS
             this.IsCompressedPoint = compressed;
             this._addressType = addressType;
             
@@ -98,7 +98,7 @@ namespace Casascius.Bitcoin {
         /// <summary>
         /// Create a Bitcoin address from a 32-byte private key
         /// </summary>
-        public KeyPair(byte[] bytes, bool compressed=false, byte addressType=0) {
+        public KeyPair(byte[] bytes, bool compressed=false, byte addressType=36) { //GRS
             if (bytes.Length == 32) {
                 PrivateKeyBytes = bytes;
                 this.IsCompressedPoint = compressed;
@@ -111,7 +111,7 @@ namespace Casascius.Bitcoin {
         /// <summary>
         /// Create a Bitcoin address from a key represented in a string.
         /// </summary>
-        public KeyPair(string key, bool compressed=false, byte addressType=0) {
+        public KeyPair(string key, bool compressed=false, byte addressType = 36) {	//GRS
             this._addressType = addressType;
             string result = constructWithKey(key, compressed);
             if (result != null) throw new ArgumentException(result);

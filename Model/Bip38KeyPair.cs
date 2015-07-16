@@ -32,6 +32,8 @@ using Org.BouncyCastle.Math.EC;
 using Org.BouncyCastle.Math;
 using CryptSharp.Utility;
 
+using Coin;
+
 namespace Casascius.Bitcoin {
     /// <summary>
     /// Represents an encrypted keypair using the methodology described in BIP 38.
@@ -147,13 +149,8 @@ namespace Casascius.Bitcoin {
         private bool verifyAddressHash(string addressBase58, byte[] hex) {
             // check address hash
             UTF8Encoding utf8 = new UTF8Encoding(false);
-            Sha256Digest sha256 = new Sha256Digest();
-            byte[] addrhash = new byte[32];
-            byte[] addrtext = utf8.GetBytes(addressBase58);
-            sha256.BlockUpdate(addrtext, 0, addrtext.Length);
-            sha256.DoFinal(addrhash, 0);
-            sha256.BlockUpdate(addrhash, 0, 32);
-            sha256.DoFinal(addrhash, 0);
+			byte[] addrtext = utf8.GetBytes(addressBase58);
+			byte[] addrhash = Global.HashForAddress(addrtext);
             if (addrhash[0] != hex[3] || addrhash[1] != hex[4] || addrhash[2] != hex[5] || addrhash[3] != hex[6]) {
                 return false;
             }
@@ -265,7 +262,7 @@ namespace Casascius.Bitcoin {
             this._addressType = key.AddressType;
 
             UTF8Encoding utf8 = new UTF8Encoding(false);
-            byte[] addrhashfull = Util.ComputeDoubleSha256(key.AddressBase58);
+            byte[] addrhashfull = Global.HashForAddress(utf8.GetBytes(key.AddressBase58));
             byte[] addresshash = new byte[] { addrhashfull[0], addrhashfull[1], addrhashfull[2], addrhashfull[3] };
 
             byte[] derivedBytes = new byte[64];
@@ -294,7 +291,7 @@ namespace Casascius.Bitcoin {
             rv[1] = 0x42;
             rv[2] = IsCompressedPoint ? (byte)0xe0 : (byte)0xc0;
 
-            byte[] checksum = Util.ComputeDoubleSha256(utf8.GetBytes(key.AddressBase58));
+            byte[] checksum = Global.HashForAddress(utf8.GetBytes(key.AddressBase58));
             rv[3] = checksum[0];
             rv[4] = checksum[1];
             rv[5] = checksum[2];

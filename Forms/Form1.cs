@@ -407,7 +407,7 @@ namespace BtcAddress {
                 }
                 byte b = 0;
                 if (Byte.TryParse(cointype, out b)) return b;
-                return 0;
+                return 36;
             }
         }
 

@@ -94,7 +94,7 @@ namespace Casascius.Bitcoin {
         }
 
 
-        protected byte _addressType = 0;
+        protected byte _addressType = 36;  // Groestlcoin
 
         private byte[] _hash160 = null;
 

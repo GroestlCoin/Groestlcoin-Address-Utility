@@ -13,6 +13,8 @@ using Org.BouncyCastle.Math.EC;
 using Org.BouncyCastle.Math;
 using CryptSharp.Utility;
 
+using Coin;
+
 namespace Casascius.Bitcoin {
     public class Bip38Confirmation : Bip38Base {
 
@@ -158,13 +160,8 @@ namespace Casascius.Bitcoin {
 
                 // get addresshash
                 UTF8Encoding utf8 = new UTF8Encoding(false);
-                Sha256Digest sha256 = new Sha256Digest();
                 byte[] generatedaddressbytes = utf8.GetBytes(generatedaddress.AddressBase58);
-                sha256.BlockUpdate(generatedaddressbytes, 0, generatedaddressbytes.Length);
-                byte[] addresshashfull = new byte[32];
-                sha256.DoFinal(addresshashfull, 0);
-                sha256.BlockUpdate(addresshashfull, 0, 32);
-                sha256.DoFinal(addresshashfull, 0);
+				byte[] addresshashfull = Global.HashForAddress(generatedaddressbytes);
 
                 for (int i = 0; i < 4; i++) {
                     if (addresshashfull[i] != _addressHash[i]) {

@@ -1,0 +1,79 @@
+<Wix xmlns='http://schemas.microsoft.com/wix/2006/wi' xmlns:netfx='http://schemas.microsoft.com/wix/NetFxExtension'>
+
+
+<?define UpgradeCode="65c1bfb5-e8be-4362-ae8c-57a2d440ce08"?>
+<?define PRODVER="2.6"?>
+
+<Product Name='GroestlCoin-Address-Utility' Id='*' UpgradeCode='$(var.UpgradeCode)' Version='$(var.PRODVER)' Manufacturer='GroestlCoin' Language='1033' >
+   	<Package Id='*' Keywords='Installer' Description="GroestlCoin-Address-Utility Installer" Comments='GroestlCoin-Address-Utility' Manufacturer='GroestlCoin' InstallerVersion='301' Compressed='yes'  />
+
+	<UIRef Id="WixUI_InstallDir" />
+
+
+	<Upgrade Id='$(var.UpgradeCode)'>
+		<UpgradeVersion OnlyDetect="yes" Minimum="$(var.PRODVER)" Property="NEWERVERSIONDETECTED" IncludeMinimum="no" />
+		<UpgradeVersion OnlyDetect="no" Maximum="99.0.0.0" Property="OLDERVERSIONBEINGUPGRADED" IncludeMaximum="no" />
+	</Upgrade>
+
+    <Icon Id="Groestlcoin.ico" SourceFile="res\icons\app_icons\groestlcoin.ico" />
+
+	<Property Id="ARPPRODUCTICON" Value="Groestlcoin.ico" />
+   	<Property Id='DiskPrompt' Value="GroestlCoin-Address-Utility" />
+	<Property Id="ARPHELPLINK" Value="http://www.groestlcoin.org/downloads/" />
+	<Property Id="ARPURLINFOABOUT" Value="http://www.groestlcoin.org/downloads/" />
+	<Property Id="ARPURLUPDATEINFO" Value="http://www.groestlcoin.org/downloads/" />
+    <Property Id="LAUNCHPRODUCT">1</Property>
+	<Property Id="ARPNOREPAIR" Value="1" />
+<!--	<Property Id="WIXUI_INSTALLDIR" Value="INSTALLDIR" />-->
+
+    <Property Id="INSTALLDIR">
+		<RegistrySearch Id="FindInstallLocation" Root="HKLM" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[OLDERVERSIONBEINGUPGRADED]" Name="InstallLocation" Type="raw" />
+    </Property>
+
+
+   	<Directory Id='TARGETDIR' Name='SourceDir'>
+		<Directory Id='ProgramFilesFolder' Name='PFiles'>
+   			<Directory Id='INSTALLDIR' Name='GroestlCoin-Address-Utility' />
+		</Directory>
+  		<Directory Id="ProgramMenuFolder" Name="Programs" />
+   		<Directory Id="DesktopFolder" Name="Desktop" />
+	</Directory>
+
+	<Media Id="1" Cabinet="grsaddress.cab" EmbedCab="yes"/>
+
+	<Component Id='CMP_GrsAddress' Guid='15e20c59-870e-4fd5-b8c0-42d250e98a82' Directory='INSTALLDIR' >
+		<File Id="GrsAddress.exe" Source="bin\Release\GrsAddress.exe"	KeyPath='yes' 		>
+			<Shortcut Id="startmenuGrsAddress" 	Directory="ProgramMenuFolder" 	Name="GroestlCoin-Address-Utility" Icon="Groestlcoin.ico" IconIndex="0" Advertise="yes" />
+			<Shortcut Id="desktopGrsAddress" 	Directory="DesktopFolder"  		Name="GroestlCoin-Address-Utility" Icon="Groestlcoin.ico" IconIndex="0" Advertise="yes" />
+		</File>
+	</Component>
+
+
+ 	<CustomAction Id="NewerVersionDetected" Error="There is a later version of this product installed"/>
+	<CustomAction Id="SetARPINSTALLLOCATION" Property="ARPINSTALLLOCATION" Value="[INSTALLDIR]" /> 
+	<CustomAction Id='LaunchFile' FileKey='GroestlCoin_Multisig.exe' ExeCommand='' Return="asyncNoWait" />
+	
+	<InstallUISequence>
+    	<AppSearch After="FindRelatedProducts"/> 
+	</InstallUISequence>
+
+
+	<InstallExecuteSequence>
+		<Custom Action="NewerVersionDetected" After="FindRelatedProducts">NEWERVERSIONDETECTED</Custom>
+		<RemoveExistingProducts After="InstallInitialize" />  
+		<InstallFiles/>
+		<Custom Action="SetARPINSTALLLOCATION" After="InstallValidate"></Custom>
+		<SelfRegModules/>
+		<Custom Action='LaunchFile' After='InstallFinalize'>LAUNCHPRODUCT</Custom> 
+	</InstallExecuteSequence>
+
+
+	<Property Id="WIXUI_INSTALLDIR" Value="INSTALLDIR" /> 
+
+   	<Feature Id='Complete' Level='1' Title='GroestlCoin-Multisig'>
+   		<ComponentRef Id='CMP_GrsAddress' />
+   	</Feature>
+
+</Product>
+</Wix>
+

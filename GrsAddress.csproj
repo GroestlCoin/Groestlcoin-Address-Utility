@@ -86,7 +86,6 @@
     <Compile Include="CryptSharp\groestl-hooks.cs" />
     <Compile Include="CryptSharp\hashalgo-common.cs" />
     <Compile Include="Model\Base58.cs" />
-    <Compile Include="Model\Base58CheckString.cs" />
     <Compile Include="Model\Bip38Base.cs" />
     <Compile Include="Model\Bip38Confirmation.cs" />
     <Compile Include="Model\Bip38Intermediate.cs" />

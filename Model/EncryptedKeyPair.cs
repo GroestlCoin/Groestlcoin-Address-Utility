@@ -138,7 +138,7 @@ namespace Casascius.Bitcoin {
             return false;
         }
 
-        protected byte _addressType = 0;
+        protected byte _addressType = 36; //GRS
 
         /// <summary>
         /// Returns true if it is possible to return or calculate the Address.

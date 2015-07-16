@@ -75,8 +75,8 @@
 			// menuStrip1
 			// 
 			this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolsToolStripMenuItem,
             this.fileToolStripMenuItem,
+            this.toolsToolStripMenuItem,
             this.keyToolStripMenuItem,
             this.selectionToolStripMenuItem});
 			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -187,21 +187,21 @@
 			// clearAllToolStripMenuItem
 			// 
 			this.clearAllToolStripMenuItem.Name = "clearAllToolStripMenuItem";
-			this.clearAllToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+			this.clearAllToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
 			this.clearAllToolStripMenuItem.Text = "Clear All";
 			this.clearAllToolStripMenuItem.Click += new System.EventHandler(this.clearAllToolStripMenuItem_Click);
 			// 
 			// saveToolStripMenuItem
 			// 
 			this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-			this.saveToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+			this.saveToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
 			this.saveToolStripMenuItem.Text = "Save";
 			this.saveToolStripMenuItem.Visible = false;
 			// 
 			// exitToolStripMenuItem
 			// 
 			this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-			this.exitToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+			this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
 			this.exitToolStripMenuItem.Text = "E&xit";
 			this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
 			// 

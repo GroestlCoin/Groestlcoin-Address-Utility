@@ -35,6 +35,8 @@ using Org.BouncyCastle.Math;
 using CryptSharp.Utility;
 using Casascius.Bitcoin;
 
+using Coin;
+
 namespace BtcAddress.Forms {
     public partial class Bip38ConfValidator : Form {
         public Bip38ConfValidator() {
@@ -176,13 +178,8 @@ namespace BtcAddress.Forms {
 
                 // get addresshash
                 UTF8Encoding utf8 = new UTF8Encoding(false);
-                Sha256Digest sha256 = new Sha256Digest();
-                byte[] generatedaddressbytes = utf8.GetBytes(generatedaddress.AddressBase58);
-                sha256.BlockUpdate(generatedaddressbytes, 0, generatedaddressbytes.Length);
-                byte[] addresshashfull = new byte[32];
-                sha256.DoFinal(addresshashfull, 0);
-                sha256.BlockUpdate(addresshashfull, 0, 32);
-                sha256.DoFinal(addresshashfull, 0);
+				byte[] generatedaddressbytes = utf8.GetBytes(generatedaddress.AddressBase58);
+				byte[] addresshashfull = Global.HashForAddress(generatedaddressbytes);
 
                 for (int i = 0; i < 4; i++) {
                     if (addresshashfull[i] != confbytes[i + 6]) {

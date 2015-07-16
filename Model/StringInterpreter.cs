@@ -28,7 +28,7 @@ namespace Casascius.Bitcoin {
         /// <summary>
         /// Scans a string for any valid Base58Check-encoded substrings, and returns them as objects.
         /// </summary>
-        public static List<object> InterpretBatch(string what, bool compressed = false, byte addressType = 0) {
+        public static List<object> InterpretBatch(string what, bool compressed = false, byte addressType = 36) {	//GRS
             int biggest_anticipated_string = 100;
             char[] curstring = new char[biggest_anticipated_string];
             int curstringidx = 0;
@@ -85,7 +85,7 @@ namespace Casascius.Bitcoin {
         /// Interprets a string to automatically detect a type of Bitcoin-related object.
         /// compressed and addresstype are only considered when the object doesn't define these itself.
         /// </summary>
-        public static object Interpret(string what, bool compressed = false, byte addressType = 0) {
+        public static object Interpret(string what, bool compressed = false, byte addressType = 36) {	//GRS
             if (what == null) return null;
             
             what = what.Trim();

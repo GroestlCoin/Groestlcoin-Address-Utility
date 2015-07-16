@@ -157,14 +157,9 @@ namespace Casascius.Bitcoin {
             if (bb == null || bb.Length < 4) return null;
 
             if (IgnoreChecksum == false) {
-                Sha256Digest bcsha256a = new Sha256Digest();
-                bcsha256a.BlockUpdate(bb, 0, bb.Length - 4);
-
-                byte[] checksum = new byte[32];  //sha256.ComputeHash(bb, 0, bb.Length - 4);
-                bcsha256a.DoFinal(checksum, 0);
-                bcsha256a.BlockUpdate(checksum, 0, 32);
-                bcsha256a.DoFinal(checksum, 0);
-
+				byte[] ba = new byte[bb.Length - 4];
+				Array.Copy(bb, ba, ba.Length);
+				byte[] checksum = Global.HashForAddress(ba);
                 for (int i = 0; i < 4; i++) {
                     if (checksum[i] != bb[bb.Length - 4 + i]) return null;
                 }
@@ -324,13 +319,14 @@ namespace Casascius.Bitcoin {
             byte[] hex2 = new byte[21];
             Array.Copy(hex, 0, hex2, 1, 20);
 
-            int cointype = 0;
-            if (Int32.TryParse(AddressType, out cointype) == false) cointype = 0;
+            int cointype = 36;		//GRS
+            if (Int32.TryParse(AddressType, out cointype) == false) cointype = 36;
 
             if (AddressType == "Testnet") cointype = 111;
             if (AddressType == "Namecoin") cointype = 52;
             if (AddressType == "Litecoin") cointype = 48;
-            hex2[0] = (byte)(cointype & 0xff);
+			if (AddressType == "Groestlcoin") cointype = 36;
+			hex2[0] = (byte)(cointype & 0xff);
             return ByteArrayToBase58Check(hex2);
 
 
