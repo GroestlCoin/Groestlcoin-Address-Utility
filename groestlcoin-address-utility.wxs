@@ -15,7 +15,7 @@
 		<UpgradeVersion OnlyDetect="no" Maximum="99.0.0.0" Property="OLDERVERSIONBEINGUPGRADED" IncludeMaximum="no" />
 	</Upgrade>
 
-    <Icon Id="Groestlcoin.ico" SourceFile="res\icons\app_icons\groestlcoin.ico" />
+    <Icon Id="Groestlcoin.ico" SourceFile="groestlcoin.ico" />
 
 	<Property Id="ARPPRODUCTICON" Value="Groestlcoin.ico" />
    	<Property Id='DiskPrompt' Value="GroestlCoin-Address-Utility" />
@@ -46,12 +46,14 @@
 			<Shortcut Id="startmenuGrsAddress" 	Directory="ProgramMenuFolder" 	Name="GroestlCoin-Address-Utility" Icon="Groestlcoin.ico" IconIndex="0" Advertise="yes" />
 			<Shortcut Id="desktopGrsAddress" 	Directory="DesktopFolder"  		Name="GroestlCoin-Address-Utility" Icon="Groestlcoin.ico" IconIndex="0" Advertise="yes" />
 		</File>
+		<File Source="BouncyCastle.Crypto.dll" />
+		<File Source="ThoughtWorks.QRCode.dll" />
 	</Component>
 
 
  	<CustomAction Id="NewerVersionDetected" Error="There is a later version of this product installed"/>
 	<CustomAction Id="SetARPINSTALLLOCATION" Property="ARPINSTALLLOCATION" Value="[INSTALLDIR]" /> 
-	<CustomAction Id='LaunchFile' FileKey='GroestlCoin_Multisig.exe' ExeCommand='' Return="asyncNoWait" />
+	<CustomAction Id='LaunchFile' FileKey='GrsAddress.exe' ExeCommand='' Return="asyncNoWait" />
 	
 	<InstallUISequence>
     	<AppSearch After="FindRelatedProducts"/> 
@@ -70,7 +72,7 @@
 
 	<Property Id="WIXUI_INSTALLDIR" Value="INSTALLDIR" /> 
 
-   	<Feature Id='Complete' Level='1' Title='GroestlCoin-Multisig'>
+   	<Feature Id='Complete' Level='1' Title='GroestlCoin-Address-Utility'>
    		<ComponentRef Id='CMP_GrsAddress' />
    	</Feature>
 

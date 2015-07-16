@@ -37,3 +37,6 @@ public class Global {
 
 }
 
+namespace MessagingToolkit.QRCode.Codec { //!!!T
+
+}
