@@ -1,6 +1,6 @@
                                  GroestlCoin-Address-Utility
 ===============================================================================
-Works on Windows and Linux and OS X (with Mono)
+Works on Windows, Linux and OS X (with Mono)
 
 Unpack ZIP archive with 3 files:
 	GrsAddress.exe
