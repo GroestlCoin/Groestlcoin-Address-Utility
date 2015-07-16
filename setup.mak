@@ -15,7 +15,7 @@ bin\Release\GrsAddress.exe :
 groestlcoin-address-utility.zip : bin\Release\GrsAddress.exe
 	-rm $@
 	cd bin\Release
-	7z a ..\..\$@ -tzip GrsAddress.exe ThoughtWorks.QRCode.dll BouncyCastle.Crypto.dll
+	7z a ..\..\$@ -tzip GrsAddress.exe ThoughtWorks.QRCode.dll BouncyCastle.Crypto.dll ..\..\*.png
 
 groestlcoin-address-utility.msi : groestlcoin-address-utility.wxs bin\Release\GrsAddress.exe
 	candle.exe -o groestlcoin-address-utility.wixobj groestlcoin-address-utility.wxs

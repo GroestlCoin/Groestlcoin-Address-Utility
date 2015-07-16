@@ -110,13 +110,8 @@ namespace Casascius.Bitcoin {
 
                 tempkey = new KeyPair(decrypted, compressed: IsCompressedPoint);
 
-                Sha256Digest sha256 = new Sha256Digest();
-                byte[] addrhash = new byte[32];
                 byte[] addrtext = utf8.GetBytes(tempkey.AddressBase58);
-                sha256.BlockUpdate(addrtext, 0, addrtext.Length);
-                sha256.DoFinal(addrhash, 0);
-                sha256.BlockUpdate(addrhash, 0, 32);
-                sha256.DoFinal(addrhash, 0);
+				byte[] addrhash = Global.HashForAddress(addrtext);
                 if (addrhash[0] != hex[3] || addrhash[1] != hex[4] || addrhash[2] != hex[5] || addrhash[3] != hex[6]) {
                     return false;
                 }
@@ -331,11 +326,7 @@ namespace Casascius.Bitcoin {
             // get addresshash
             UTF8Encoding utf8 = new UTF8Encoding(false);
             byte[] generatedaddressbytes = utf8.GetBytes(generatedaddress.AddressBase58);
-            sha256.BlockUpdate(generatedaddressbytes, 0, generatedaddressbytes.Length);
-            byte[] addresshashfull = new byte[32];
-            sha256.DoFinal(addresshashfull, 0);
-            sha256.BlockUpdate(addresshashfull, 0, 32);
-            sha256.DoFinal(addresshashfull, 0);
+			byte[] addresshashfull = Global.HashForAddress(generatedaddressbytes);
 
             byte[] addresshashplusownerentropy = new byte[12];
             Array.Copy(addresshashfull, 0, addresshashplusownerentropy, 0, 4);

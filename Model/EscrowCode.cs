@@ -140,7 +140,7 @@ namespace Casascius.Bitcoin {
         /// <summary>
         /// Constructor that takes a single Escrow Invitation Code and produces a Payment Invitation Code.
         /// </summary>
-        public EscrowCodeSet(string escrowInvitationCode, bool doCompressed=false, byte networkByte = 0) {
+        public EscrowCodeSet(string escrowInvitationCode, bool doCompressed=false, byte networkByte = 36) {		//GRS
             byte[] pubpart, privpart;
             int identifier30;
             string failreason = parseEscrowCode(escrowInvitationCode, out pubpart, out privpart, out identifier30);

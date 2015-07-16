@@ -48,6 +48,11 @@
 		</File>
 		<File Source="BouncyCastle.Crypto.dll" />
 		<File Source="ThoughtWorks.QRCode.dll" />
+		<File Source="note-green.png" />
+		<File Source="note-yellow.png" />
+		<File Source="note-purple.png" />
+		<File Source="note-blue.png" />
+		<File Source="note-Greyscale.png">
 	</Component>
 
 
