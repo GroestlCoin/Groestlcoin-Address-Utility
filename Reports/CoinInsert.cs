@@ -150,7 +150,7 @@ namespace BtcAddress {
                     e.Graphics.DrawImage(b2, thiscodeX + 100, thiscodeY, 100, 100);
                 }
             
-                e.Graphics.DrawString("Bitcoin address:\r\n" + address, font, Brushes.Black, thiscodeX + 210, thiscodeY);
+                e.Graphics.DrawString("Groestlcoin address:\r\n" + address, font, Brushes.Black, thiscodeX + 210, thiscodeY);
 
                 StringFormat sf = new StringFormat();
                 sf.Alignment = StringAlignment.Far; // right justify

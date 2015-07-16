@@ -94,7 +94,7 @@
 			this.lblAddressHeader.Name = "lblAddressHeader";
 			this.lblAddressHeader.Size = new System.Drawing.Size(98, 13);
 			this.lblAddressHeader.TabIndex = 6;
-			this.lblAddressHeader.Text = "Bitcoin address:";
+			this.lblAddressHeader.Text = "Groestlcoin address:";
 			this.lblAddressHeader.Visible = false;
 			// 
 			// lblAddressItself

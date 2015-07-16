@@ -36,6 +36,13 @@ OS X
 	mono GrsAddress.exe
 
 
+BUILD
+-------------
+This project has two dependencies:
 
+1. the BouncyCastle Crypto library.
+2. ThoughtWorks QRCode DLL
+
+Get BouncyCastle from http://www.bouncycastle.org/csharp/  (just the compiled assembly is fine).
 
 

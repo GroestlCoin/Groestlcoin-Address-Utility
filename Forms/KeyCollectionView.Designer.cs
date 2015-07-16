@@ -26,6 +26,10 @@
 			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KeyCollectionView));
 			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+			this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.clearAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.addressUtilityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.base58CalculatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -37,10 +41,6 @@
 			this.keyCombinerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.keyDecrypterToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
 			this.escrowToolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.clearAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.keyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.newAddressToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.generateKeysToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -87,6 +87,37 @@
 			this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
 			this.menuStrip1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.menuStrip1_MouseMove);
 			// 
+			// fileToolStripMenuItem
+			// 
+			this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.clearAllToolStripMenuItem,
+            this.saveToolStripMenuItem,
+            this.exitToolStripMenuItem});
+			this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+			this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+			this.fileToolStripMenuItem.Text = "&File";
+			// 
+			// clearAllToolStripMenuItem
+			// 
+			this.clearAllToolStripMenuItem.Name = "clearAllToolStripMenuItem";
+			this.clearAllToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+			this.clearAllToolStripMenuItem.Text = "Clear All";
+			this.clearAllToolStripMenuItem.Click += new System.EventHandler(this.clearAllToolStripMenuItem_Click);
+			// 
+			// saveToolStripMenuItem
+			// 
+			this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+			this.saveToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+			this.saveToolStripMenuItem.Text = "Save";
+			this.saveToolStripMenuItem.Visible = false;
+			// 
+			// exitToolStripMenuItem
+			// 
+			this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+			this.exitToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+			this.exitToolStripMenuItem.Text = "E&xit";
+			this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+			// 
 			// toolsToolStripMenuItem
 			// 
 			this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -126,6 +157,7 @@
 			this.mofNCalculatorToolStripMenuItem.Name = "mofNCalculatorToolStripMenuItem";
 			this.mofNCalculatorToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
 			this.mofNCalculatorToolStripMenuItem.Text = "M-of-N Calculator";
+			this.mofNCalculatorToolStripMenuItem.Visible = false;
 			this.mofNCalculatorToolStripMenuItem.Click += new System.EventHandler(this.mofNCalculatorToolStripMenuItem_Click);
 			// 
 			// twoFactorBitcoinToolsToolStripMenuItem
@@ -173,37 +205,6 @@
 			this.escrowToolsToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
 			this.escrowToolsToolStripMenuItem.Text = "Escrow Tools";
 			this.escrowToolsToolStripMenuItem.Click += new System.EventHandler(this.escrowToolsToolStripMenuItem_Click);
-			// 
-			// fileToolStripMenuItem
-			// 
-			this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.clearAllToolStripMenuItem,
-            this.saveToolStripMenuItem,
-            this.exitToolStripMenuItem});
-			this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-			this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
-			this.fileToolStripMenuItem.Text = "&File";
-			// 
-			// clearAllToolStripMenuItem
-			// 
-			this.clearAllToolStripMenuItem.Name = "clearAllToolStripMenuItem";
-			this.clearAllToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-			this.clearAllToolStripMenuItem.Text = "Clear All";
-			this.clearAllToolStripMenuItem.Click += new System.EventHandler(this.clearAllToolStripMenuItem_Click);
-			// 
-			// saveToolStripMenuItem
-			// 
-			this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-			this.saveToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-			this.saveToolStripMenuItem.Text = "Save";
-			this.saveToolStripMenuItem.Visible = false;
-			// 
-			// exitToolStripMenuItem
-			// 
-			this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-			this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-			this.exitToolStripMenuItem.Text = "E&xit";
-			this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
 			// 
 			// keyToolStripMenuItem
 			// 
@@ -258,47 +259,47 @@
 			// selectAllToolStripMenuItem
 			// 
 			this.selectAllToolStripMenuItem.Name = "selectAllToolStripMenuItem";
-			this.selectAllToolStripMenuItem.Size = new System.Drawing.Size(265, 22);
+			this.selectAllToolStripMenuItem.Size = new System.Drawing.Size(288, 22);
 			this.selectAllToolStripMenuItem.Text = "Select All";
 			this.selectAllToolStripMenuItem.Click += new System.EventHandler(this.selectAllToolStripMenuItem_Click);
 			// 
 			// deselectAllToolStripMenuItem
 			// 
 			this.deselectAllToolStripMenuItem.Name = "deselectAllToolStripMenuItem";
-			this.deselectAllToolStripMenuItem.Size = new System.Drawing.Size(265, 22);
+			this.deselectAllToolStripMenuItem.Size = new System.Drawing.Size(288, 22);
 			this.deselectAllToolStripMenuItem.Text = "Deselect All";
 			this.deselectAllToolStripMenuItem.Click += new System.EventHandler(this.deselectAllToolStripMenuItem_Click);
 			// 
 			// toolStripSeparator1
 			// 
 			this.toolStripSeparator1.Name = "toolStripSeparator1";
-			this.toolStripSeparator1.Size = new System.Drawing.Size(262, 6);
+			this.toolStripSeparator1.Size = new System.Drawing.Size(285, 6);
 			// 
 			// printBanknoteVouchersToolStripMenuItem
 			// 
 			this.printBanknoteVouchersToolStripMenuItem.Name = "printBanknoteVouchersToolStripMenuItem";
-			this.printBanknoteVouchersToolStripMenuItem.Size = new System.Drawing.Size(265, 22);
+			this.printBanknoteVouchersToolStripMenuItem.Size = new System.Drawing.Size(288, 22);
 			this.printBanknoteVouchersToolStripMenuItem.Text = "Print Banknote Vouchers";
 			this.printBanknoteVouchersToolStripMenuItem.Click += new System.EventHandler(this.printBanknoteVouchersToolStripMenuItem_Click);
 			// 
 			// printTwoFactorCoinInsertsToolStripMenuItem
 			// 
 			this.printTwoFactorCoinInsertsToolStripMenuItem.Name = "printTwoFactorCoinInsertsToolStripMenuItem";
-			this.printTwoFactorCoinInsertsToolStripMenuItem.Size = new System.Drawing.Size(265, 22);
-			this.printTwoFactorCoinInsertsToolStripMenuItem.Text = "Print Physical Bitcoin Inserts";
+			this.printTwoFactorCoinInsertsToolStripMenuItem.Size = new System.Drawing.Size(288, 22);
+			this.printTwoFactorCoinInsertsToolStripMenuItem.Text = "Print Physical Groestlcoin Inserts";
 			this.printTwoFactorCoinInsertsToolStripMenuItem.Click += new System.EventHandler(this.printTwoFactorCoinInsertsToolStripMenuItem_Click);
 			// 
 			// printPhysicalBitcoinInsertsDenseToolStripMenuItem
 			// 
 			this.printPhysicalBitcoinInsertsDenseToolStripMenuItem.Name = "printPhysicalBitcoinInsertsDenseToolStripMenuItem";
-			this.printPhysicalBitcoinInsertsDenseToolStripMenuItem.Size = new System.Drawing.Size(265, 22);
-			this.printPhysicalBitcoinInsertsDenseToolStripMenuItem.Text = "Print Physical Bitcoin Inserts - Dense";
+			this.printPhysicalBitcoinInsertsDenseToolStripMenuItem.Size = new System.Drawing.Size(288, 22);
+			this.printPhysicalBitcoinInsertsDenseToolStripMenuItem.Text = "Print Physical Groestlcoin Inserts - Dense";
 			this.printPhysicalBitcoinInsertsDenseToolStripMenuItem.Click += new System.EventHandler(this.printTwoFactorCoinInsertsToolStripMenuItem_Click);
 			// 
 			// printPaperWalletsToolStripMenuItem
 			// 
 			this.printPaperWalletsToolStripMenuItem.Name = "printPaperWalletsToolStripMenuItem";
-			this.printPaperWalletsToolStripMenuItem.Size = new System.Drawing.Size(265, 22);
+			this.printPaperWalletsToolStripMenuItem.Size = new System.Drawing.Size(288, 22);
 			this.printPaperWalletsToolStripMenuItem.Text = "Print Paper Wallets";
 			this.printPaperWalletsToolStripMenuItem.Visible = false;
 			this.printPaperWalletsToolStripMenuItem.Click += new System.EventHandler(this.printPaperWalletsToolStripMenuItem_Click);
@@ -306,31 +307,31 @@
 			// toolStripSeparator2
 			// 
 			this.toolStripSeparator2.Name = "toolStripSeparator2";
-			this.toolStripSeparator2.Size = new System.Drawing.Size(262, 6);
+			this.toolStripSeparator2.Size = new System.Drawing.Size(285, 6);
 			// 
 			// saveAddressListToolStripMenuItem
 			// 
 			this.saveAddressListToolStripMenuItem.Name = "saveAddressListToolStripMenuItem";
-			this.saveAddressListToolStripMenuItem.Size = new System.Drawing.Size(265, 22);
+			this.saveAddressListToolStripMenuItem.Size = new System.Drawing.Size(288, 22);
 			this.saveAddressListToolStripMenuItem.Text = "Save Address List";
 			this.saveAddressListToolStripMenuItem.Click += new System.EventHandler(this.saveAddressListToolStripMenuItem_Click);
 			// 
 			// saveAddressListWithPrivKeyToolStripMenuItem
 			// 
 			this.saveAddressListWithPrivKeyToolStripMenuItem.Name = "saveAddressListWithPrivKeyToolStripMenuItem";
-			this.saveAddressListWithPrivKeyToolStripMenuItem.Size = new System.Drawing.Size(265, 22);
+			this.saveAddressListWithPrivKeyToolStripMenuItem.Size = new System.Drawing.Size(288, 22);
 			this.saveAddressListWithPrivKeyToolStripMenuItem.Text = "Save Address List with PrivKey";
 			this.saveAddressListWithPrivKeyToolStripMenuItem.Click += new System.EventHandler(this.saveAddressListWithPrivKeyToolStripMenuItem_Click);
 			// 
 			// toolStripSeparator3
 			// 
 			this.toolStripSeparator3.Name = "toolStripSeparator3";
-			this.toolStripSeparator3.Size = new System.Drawing.Size(262, 6);
+			this.toolStripSeparator3.Size = new System.Drawing.Size(285, 6);
 			// 
 			// deleteSelectedItemsToolStripMenuItem
 			// 
 			this.deleteSelectedItemsToolStripMenuItem.Name = "deleteSelectedItemsToolStripMenuItem";
-			this.deleteSelectedItemsToolStripMenuItem.Size = new System.Drawing.Size(265, 22);
+			this.deleteSelectedItemsToolStripMenuItem.Size = new System.Drawing.Size(288, 22);
 			this.deleteSelectedItemsToolStripMenuItem.Text = "Delete Selected Items";
 			this.deleteSelectedItemsToolStripMenuItem.Click += new System.EventHandler(this.deleteSelectedItemsToolStripMenuItem_Click);
 			// 

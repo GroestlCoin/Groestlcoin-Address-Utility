@@ -85,6 +85,7 @@
 			this.cboArtworkStyle.Name = "cboArtworkStyle";
 			this.cboArtworkStyle.Size = new System.Drawing.Size(195, 21);
 			this.cboArtworkStyle.TabIndex = 4;
+			this.cboArtworkStyle.Visible = false;
 			// 
 			// label3
 			// 
@@ -94,6 +95,7 @@
 			this.label3.Size = new System.Drawing.Size(67, 13);
 			this.label3.TabIndex = 5;
 			this.label3.Text = "Artwork style";
+			this.label3.Visible = false;
 			// 
 			// label4
 			// 
@@ -103,6 +105,7 @@
 			this.label4.Size = new System.Drawing.Size(107, 13);
 			this.label4.TabIndex = 6;
 			this.label4.Text = "Denomination to print";
+			this.label4.Visible = false;
 			// 
 			// txtDenomination
 			// 
@@ -110,6 +113,7 @@
 			this.txtDenomination.Name = "txtDenomination";
 			this.txtDenomination.Size = new System.Drawing.Size(127, 20);
 			this.txtDenomination.TabIndex = 7;
+			this.txtDenomination.Visible = false;
 			// 
 			// comboBox2
 			// 
@@ -165,6 +169,7 @@
 			this.linkLabel1.TabIndex = 12;
 			this.linkLabel1.TabStop = true;
 			this.linkLabel1.Text = "฿";
+			this.linkLabel1.Visible = false;
 			this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
 			// 
 			// linkLabel2
@@ -177,6 +182,7 @@
 			this.linkLabel2.TabIndex = 13;
 			this.linkLabel2.TabStop = true;
 			this.linkLabel2.Text = "Ƀ";
+			this.linkLabel2.Visible = false;
 			this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
 			// 
 			// button1

@@ -117,7 +117,7 @@ namespace BtcAddress {
                     } else if (ScriptMode) {
                         wallet.AppendFormat("# {0}: {1}\"\r\n./bitcoind importprivkey {2}\r\n", i, Address, PrivWIF);                                            
                     } else {
-                        wallet.AppendFormat("Bitcoin Address #{0}: {1}\r\n", i, Address);
+                        wallet.AppendFormat("Groestlcoin Address #{0}: {1}\r\n", i, Address);
                         wallet.AppendFormat("Private Key: {0}\r\n\r\n", PrivWIF);
                     }
 

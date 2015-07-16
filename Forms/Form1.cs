@@ -423,7 +423,7 @@ namespace BtcAddress {
         }
 
         private void lblWhyNot_Click(object sender, EventArgs e) {
-            MessageBox.Show("Bitcoins are vulnerable to theft from hackers when sent to addresses generated from short or non-complex passphrases.  A longer one, or one that uses a good " +
+            MessageBox.Show("Groestlcoins are vulnerable to theft from hackers when sent to addresses generated from short or non-complex passphrases.  A longer one, or one that uses a good " +
               "mix of uppercase, lowercase, numbers, and symbols is recommended.", "Security Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -546,7 +546,7 @@ namespace BtcAddress {
 
                 string pubhex = Util.PrivHexToPubHex(Util.ByteArrayToString(Util.ComputeSha256(shacode)));
                 string pubhash = Util.PubHexToPubHash(pubhex);
-                string address = Util.PubHashToAddress(pubhash, "Bitcoin");
+                string address = Util.PubHashToAddress(pubhash, "Groestlcoin");
 
 
                 pubhex = pubhex.Replace(" ", "");
@@ -596,7 +596,7 @@ namespace BtcAddress {
 
                         string pubhex = Util.PrivHexToPubHex(Util.ByteArrayToString(privkey)).Replace(" ", "");
                         string pubhash = Util.PubHexToPubHash(pubhex);
-                        string address = Util.PubHashToAddress(pubhash, "Bitcoin");
+                        string address = Util.PubHashToAddress(pubhash, "Groestlcoin");
 
                         if (address != fields[0] || pubhex != fields[2]) {
                             MessageBox.Show("Validation failure on line " + LineNumber.ToString());

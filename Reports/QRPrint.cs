@@ -45,7 +45,7 @@ namespace BtcAddress {
 
         public string Denomination = "";
 
-        public string ImageFilename = "note-yellow.png";
+        public string ImageFilename = "groestlcoin-note.png";
 
         public int NotesPerPage = 3;
 
@@ -199,34 +199,29 @@ namespace BtcAddress {
                     Bitmap b2 = QR.EncodeQRCode(k.GetAddressBase58());
                     e.Graphics.DrawImage(b2,
                         leftOffset + scalefactor * (float)(thiscodeX + 39),
-                        scalefactor * (float)(thiscodeY + 90), scalefactor * 128F, scalefactor * 128F);
+                        scalefactor * (float)(thiscodeY + 70), scalefactor * 128F, scalefactor * 128F);
 
                     // write bitcoin address
                     StringFormat sf = new StringFormat();
                     //sf.FormatFlags |= StringFormatFlags.DirectionVertical | StringFormatFlags.DirectionRightToLeft;
 
                     e.Graphics.RotateTransform(-90F);
-                    e.Graphics.DrawString("Bitcoin Address\r\n" + k.GetAddressBase58(), ubuntumid, Brushes.Black,
+                    e.Graphics.DrawString("Groestlcoin Address\r\n" + k.GetAddressBase58(), ubuntumid, Brushes.Black,
                         -scalefactor * (float)(thiscodeY + 338),
                         leftOffset + scalefactor * (float)(thiscodeX + 170), 
 
                         sf);
 
-                    // write private key
-                    string whattoprint;
-                    if (privkey.Length > 30) {
-                        whattoprint = privkey.Substring(0, 25) + "\r\n" + privkey.Substring(25);
-                    } else {
-                        whattoprint = "\r\n" + privkey;
-                    }
-                    float xpos =  444;
+					// write private key
+					string whattoprint = privkey;
+                    float xpos =  460;
                     if (privkey.StartsWith("6")) {
                         whattoprint = "Password Required\r\n" + whattoprint;
                         xpos -=  10;
                     }
 
                     e.Graphics.DrawString(whattoprint, ubuntufont, Brushes.Black,
-                        -scalefactor * (float)(thiscodeY + 290),
+                        -scalefactor * (float)(thiscodeY + 300),
                         leftOffset + scalefactor * (float)(thiscodeX + xpos),
                         sf);
 
@@ -259,7 +254,7 @@ namespace BtcAddress {
                     // ----------------------------------------------------------------
                     e.Graphics.DrawImage(b, thiscodeX, thiscodeY, 100, 100);
 
-                    e.Graphics.DrawString("Bitcoin address: " + k.GetAddressBase58(), fontsmall, Brushes.Black, thiscodeX + 110, thiscodeY);
+                    e.Graphics.DrawString("Groestlcoin address: " + k.GetAddressBase58(), fontsmall, Brushes.Black, thiscodeX + 110, thiscodeY);
 
                     string whattowrite;
                     if (privkey.Length > 30) {
@@ -292,7 +287,7 @@ namespace BtcAddress {
                     Bitmap b2 = qr2.Encode(k.GetAddressBase58());
                     e.Graphics.DrawImage(b2, thiscodeX, thiscodeY, 100, 100);
 
-                    e.Graphics.DrawString("Bitcoin address:\r\n" + k.GetAddressBase58(), font, Brushes.Black, thiscodeX + 110, thiscodeY);
+                    e.Graphics.DrawString("Groestlcoin address:\r\n" + k.GetAddressBase58(), font, Brushes.Black, thiscodeX + 110, thiscodeY);
 
                     StringFormat sf = new StringFormat();
                     sf.Alignment = StringAlignment.Far; // right justify
