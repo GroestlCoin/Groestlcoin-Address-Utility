@@ -390,12 +390,8 @@ namespace BtcAddress {
                 string cointype = cboCoinType.SelectedText.ToLowerInvariant();
                 switch (cointype) {
 					case "groestlcoin": return 36;
-/*!!!					case "bitcoin": return 0;
-                    case "namecoin": return 52;
-                    case "testnet": return 111;
-                    case "litecoin": return 48;*/
                 }
-                byte b = 0;
+                byte b = 36;
                 if (Byte.TryParse(cointype, out b)) return b;
                 return 36;
             }
@@ -407,7 +403,7 @@ namespace BtcAddress {
         }
 
         private void whatIsASHAcodeToolStripMenuItem_Click(object sender, EventArgs e) {
-            MessageBox.Show("A Mini Private Key is a Bitcoin address generated from a short 30-character string of text.  The advantage is that the text representation of the private key is shorter, and easier to use in " +
+            MessageBox.Show("A Mini Private Key is a Groestlcoin address generated from a short 30-character string of text.  The advantage is that the text representation of the private key is shorter, and easier to use in " +
             "QR codes and in other places where space is at a premium. " +
                 "The private key is simply the SHA256 hash of the string.  SHAcodes start with the letter 'S' and include a 7-bit typo check.");
         }

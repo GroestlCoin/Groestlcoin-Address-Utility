@@ -40,7 +40,7 @@
 			this.label1.AutoSize = true;
 			this.label1.Location = new System.Drawing.Point(12, 9);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(676, 104);
+			this.label1.Size = new System.Drawing.Size(697, 104);
 			this.label1.TabIndex = 0;
 			this.label1.Text = resources.GetString("label1.Text");
 			// 
@@ -92,7 +92,7 @@
 			this.lblAddressHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblAddressHeader.Location = new System.Drawing.Point(12, 216);
 			this.lblAddressHeader.Name = "lblAddressHeader";
-			this.lblAddressHeader.Size = new System.Drawing.Size(98, 13);
+			this.lblAddressHeader.Size = new System.Drawing.Size(123, 13);
 			this.lblAddressHeader.TabIndex = 6;
 			this.lblAddressHeader.Text = "Groestlcoin address:";
 			this.lblAddressHeader.Visible = false;
@@ -102,7 +102,7 @@
 			this.lblAddressItself.AutoSize = true;
 			this.lblAddressItself.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblAddressItself.ForeColor = System.Drawing.Color.Green;
-			this.lblAddressItself.Location = new System.Drawing.Point(112, 216);
+			this.lblAddressItself.Location = new System.Drawing.Point(141, 216);
 			this.lblAddressItself.Name = "lblAddressItself";
 			this.lblAddressItself.Size = new System.Drawing.Size(170, 13);
 			this.lblAddressItself.TabIndex = 7;
@@ -118,7 +118,7 @@
 			this.lblResult.Name = "lblResult";
 			this.lblResult.Size = new System.Drawing.Size(394, 13);
 			this.lblResult.TabIndex = 8;
-			this.lblResult.Text = "It is confirmed that this Bitcoin address depends on this passphrase.";
+			this.lblResult.Text = "It is confirmed that this Groestlcoin address depends on this passphrase.";
 			this.lblResult.Visible = false;
 			// 
 			// Bip38ConfValidator

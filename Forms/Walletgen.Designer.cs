@@ -46,7 +46,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(672, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Paper Wallet Generator generates a deterministic Bitcoin wallet from a passphrase" +
+            this.label1.Text = "Paper Wallet Generator generates a deterministic Groestlcoin wallet from a passphrase" +
     ".  Entering the same passphrase generates the same wallet.";
             // 
             // label2

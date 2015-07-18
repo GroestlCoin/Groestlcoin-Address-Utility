@@ -77,11 +77,11 @@ namespace BtcAddress {
                 bool ShowHelpText = cboOutputType.Text.Contains("Normal");
 
                 if (ShowHelpText) {
-                    wallet.AppendLine("Paper Bitcoin Wallet.  Keep private, do not lose, do not allow anyone to make a copy.  Anyone with the passphrase or private keys can steal your funds.\r\n");
+                    wallet.AppendLine("Paper Groestlcoin Wallet.  Keep private, do not lose, do not allow anyone to make a copy.  Anyone with the passphrase or private keys can steal your funds.\r\n");
 
                     wallet.AppendLine("Passphrase was:");
                     wallet.AppendLine(txtPassphrase.Text);
-                    wallet.AppendLine("Freely give out the Bitcoin address.  The private key after each address is the key needed to unlock funds sent to the Bitcoin address.\r\n");
+                    wallet.AppendLine("Freely give out the Groestlcoin address.  The private key after each address is the key needed to unlock funds sent to the Groestlcoin address.\r\n");
 
                 }
                 progressBar1.Maximum = n;

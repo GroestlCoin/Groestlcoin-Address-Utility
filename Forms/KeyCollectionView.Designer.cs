@@ -169,7 +169,7 @@
             this.keyDecrypterToolStripMenuItem1});
 			this.twoFactorBitcoinToolsToolStripMenuItem.Name = "twoFactorBitcoinToolsToolStripMenuItem";
 			this.twoFactorBitcoinToolsToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
-			this.twoFactorBitcoinToolsToolStripMenuItem.Text = "Two-Factor Bitcoin Tools";
+			this.twoFactorBitcoinToolsToolStripMenuItem.Text = "Two-Factor Groestlcoin Tools";
 			// 
 			// intermediateGeneratorToolStripMenuItem
 			// 

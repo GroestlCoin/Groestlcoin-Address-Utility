@@ -173,7 +173,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(619, 13);
             this.label4.TabIndex = 7;
-            this.label4.Text = "Here is the Bitcoin address that belongs to the transaction.  Give both the Bitco" +
+            this.label4.Text = "Here is the Groestlcoin address that belongs to the transaction.  Give both the Bitco" +
     "in address and the payment invitation to the payee.";
             // 
             // button4
@@ -470,7 +470,7 @@
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(367, 13);
             this.label15.TabIndex = 8;
-            this.label15.Text = "The code (private key) needed to collect the funds into your Bitcoin wallet is:";
+            this.label15.Text = "The code (private key) needed to collect the funds into your Groestlcoin wallet is:";
             // 
             // txtRedeemAddress
             // 
@@ -486,7 +486,7 @@
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(114, 13);
             this.label14.TabIndex = 6;
-            this.label14.Text = "The Bitcoin address is:";
+            this.label14.Text = "The Groestlcoin address is:";
             // 
             // btnRedeem
             // 
