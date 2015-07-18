@@ -400,10 +400,10 @@ namespace BtcAddress {
                 string cointype = cboCoinType.SelectedText.ToLowerInvariant();
                 switch (cointype) {
 					case "groestlcoin": return 36;
-					case "bitcoin": return 0;
+/*!!!					case "bitcoin": return 0;
                     case "namecoin": return 52;
                     case "testnet": return 111;
-                    case "litecoin": return 48;
+                    case "litecoin": return 48;*/
                 }
                 byte b = 0;
                 if (Byte.TryParse(cointype, out b)) return b;

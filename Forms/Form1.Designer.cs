@@ -578,7 +578,6 @@
         private System.Windows.Forms.ToolStripMenuItem copyPublicHexQRMenuItem;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ToolStripMenuItem pPECKeygenToolStripMenuItem;
-
-    }
+	}
 }
 
