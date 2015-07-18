@@ -141,7 +141,7 @@
 			// 
 			this.comboBox3.FormattingEnabled = true;
 			this.comboBox3.Items.AddRange(new object[] {
-            "Bitcoin address only",
+            "Groestlcoin address only",
             "blockchain.info/address URL"});
 			this.comboBox3.Location = new System.Drawing.Point(110, 122);
 			this.comboBox3.Name = "comboBox3";

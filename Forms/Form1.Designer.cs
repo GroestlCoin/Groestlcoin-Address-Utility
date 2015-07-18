@@ -309,6 +309,7 @@
 			this.mofNCalcToolStripMenuItem.Name = "mofNCalcToolStripMenuItem";
 			this.mofNCalcToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
 			this.mofNCalcToolStripMenuItem.Text = "M-of-N Calculator";
+			this.mofNCalcToolStripMenuItem.Visible = false;
 			this.mofNCalcToolStripMenuItem.Click += new System.EventHandler(this.mofNCalcToolStripMenuItem_Click);
 			// 
 			// pPECKeygenToolStripMenuItem

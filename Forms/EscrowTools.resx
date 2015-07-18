@@ -127,9 +127,9 @@ Please enter all three codes, in any order.</value>
   <data name="label5.Text" xml:space="preserve">
     <value>For your security:
 
-1. If you are able, provide the payer with a signed message including the payment invitation and Bitcoin address.
+1. If you are able, provide the payer with a signed message including the payment invitation and Groestlcoin address.
 
-2. Make sure the payer verifies that combining your Payment Invitation with their Escrow Invitation gives the same Bitcoin address, before paying.
+2. Make sure the payer verifies that combining your Payment Invitation with their Escrow Invitation gives the same Groestlcoin address, before paying.
     If they can't verify it, or they see a different payment address, they won't be able to release your funds to you.
 
 3. Do not give the Payment Invitation code to the escrow agent.  Otherwise, you are giving the escrow agent the ability to take the funds.
@@ -150,8 +150,8 @@ To be a payee, you'll need an Escrow Invitation code from the escrow agent.  Ent
     <value>For your security:
 
 1. Do not pay any address until you have verified that it a) can be confirmed with this screen, and b) the payee has confirmed it as correct.
-    If you do not confirm it with this screen, you risk being asked to pay a different Bitcoin address that isn't under escrow.
-    The escrow agent will not know the Bitcoin address and does not need to confirm it.
+    If you do not confirm it with this screen, you risk being asked to pay a different Groestlcoin address that isn't under escrow.
+    The escrow agent will not know the Groestlcoin address and does not need to confirm it.
 
 2. Do not give the Payment Invitation code to the escrow agent.  Otherwise, you are giving the escrow agent the ability to take the funds.
 
@@ -161,7 +161,7 @@ To be a payee, you'll need an Escrow Invitation code from the escrow agent.  Ent
 To release the funds to the payer (i.e. complete the transaction), simply give them your Escrow Invitation code, so that they have both codes.</value>
   </data>
   <data name="lblPayerHereIs.Text" xml:space="preserve">
-    <value>Here is the Bitcoin address that belongs to the transaction.  Does it match the Bitcoin address the payer is asking you to pay?
+    <value>Here is the Groestlcoin address that belongs to the transaction.  Does it match the Groestlcoin address the payer is asking you to pay?
 If not, do not pay!  Check to make sure there wasn't a mistake, and ask the payee to start with a fresh Escrow Invitation code if necessary.</value>
   </data>
   <data name="label9.Text" xml:space="preserve">
@@ -179,7 +179,7 @@ Enter them here (in any order).
 1. When possible, deliver the payer and payee codes to your clients using encrypted messaging such as PGP.
 
 2. Set limits beforehand as to the extent you'll intervene in someone else's dispute, and put it in writing.  When possible, deliver the codes to the
-    payer and payee together with the statement describing the limit of your willingness to intervene, including a maximum Bitcoin amount if applicable.
+    payer and payee together with the statement describing the limit of your willingness to intervene, including a maximum Groestlcoin amount if applicable.
 
 3. Set a policy to strongly discourage clients from reusing Escrow Invitation Codes as this can compromise the escrow protection.
 
@@ -190,7 +190,7 @@ a partial release.  If a partial release is justified to one party, have them pa
   </data>
   <data name="label12.Text" xml:space="preserve">
     <value>The Escrow Agent in a transaction is the person who can break a stalemate if a payee and payer both refuse to release funds to one another.
-The Escrow Agent cannot get access to the funds, and does not know the Bitcoin address of the transaction unless the other parties
+The Escrow Agent cannot get access to the funds, and does not know the Groestlcoin address of the transaction unless the other parties
 choose to share it.  You become an escrow agent when two parties use Escrow Invitation codes provided by you to start a transaction.
 
 To initiate an escrow transaction, click Generate Escrow Invitation.  Two codes will be generated.  Give one code to the payer and the

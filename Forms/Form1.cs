@@ -323,17 +323,7 @@ namespace BtcAddress {
 
         private void btnBlockExplorer_Click(object sender, EventArgs e) {
             try {
-				if (cboCoinType.Text == "Groestlcoin") {
-					Process.Start("https://chainz.cryptoid.info/grs/address.dws?" + txtBtcAddr.Text);
-				} else if (cboCoinType.Text == "Testnet") {
-                    Process.Start("http://www.blockexplorer.com/testnet/address/" + txtBtcAddr.Text);
-                } else if (cboCoinType.Text == "Namecoin") {
-                    Process.Start("http://explorer.dot-bit.org/a/" + txtBtcAddr.Text);
-                } else if (cboCoinType.Text == "Litecoin") {
-                    Process.Start("http://explorer.litecoin.net/address/" + txtBtcAddr.Text);
-                } else {
-                    Process.Start("http://www.blockchain.info/address/" + txtBtcAddr.Text);
-                }
+				Process.Start("https://chainz.cryptoid.info/grs/address.dws?" + txtBtcAddr.Text);
             } catch { }
             
         }
@@ -628,7 +618,7 @@ namespace BtcAddress {
                         for (int j = 0; j < 32; j++) {
                             privkey[j+1] = b[i + j + 2];
                         }
-                        Debug.WriteLine("./bitcoind importprivkey " + Util.ByteArrayToBase58Check(privkey));
+                        Debug.WriteLine("./groestlcoind importprivkey " + Util.ByteArrayToBase58Check(privkey));
                     }
                 }
             }*/

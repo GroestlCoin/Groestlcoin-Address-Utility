@@ -118,11 +118,11 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="label1.Text" xml:space="preserve">
-    <value>A confirmation code is evidence that someone generated a Bitcoin address on your behalf from which only you can spend using a passphrase.
+    <value>A confirmation code is evidence that someone generated a Groestlcoin address on your behalf from which only you can spend using a passphrase.
 
-Confirmation Code Validator lets you verify that a Bitcoin address you were given actually requires your passphrase for spending.
-This protects you from the risk that someone gave you a Bitcoin address that doesn't really belong to you while pretending that it does.
-Confirmation codes are provided by the person who generated Bitcoin addresses for you.  One code validates one address.
+Confirmation Code Validator lets you verify that a Groestlcoin address you were given actually requires your passphrase for spending.
+This protects you from the risk that someone gave you a Groestlcoin address that doesn't really belong to you while pretending that it does.
+Confirmation codes are provided by the person who generated Groestlcoin addresses for you.  One code validates one address.
 The confirmation code does not contain the private key and cannot be used to spend the funds, even if you know the passphrase.
 
 Enter a passphrase and a confirmation code.</value>

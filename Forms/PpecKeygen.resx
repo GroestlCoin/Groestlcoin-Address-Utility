@@ -121,7 +121,7 @@
     <value>This screen generates an Intermediate Passphrase as described by BIP 38 (Bitcoin Improvement Proposal 38).
 
 Enter a passphrase, and an Intermediate Passphrase Code will be generated.  You can give this code to someone else,
-and they can use it to create encrypted Bitcoin addresses that require your original passphrase to spend.  The other party can add
+and they can use it to create encrypted Groestlcoin addresses that require your original passphrase to spend.  The other party can add
 funds to the addresses but cannot spend funds from them.
 
 The intermediate code is generated using the well-known algorithm called "scrypt".  As long as the passphrase is reasonably strong, the
