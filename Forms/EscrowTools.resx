@@ -172,7 +172,8 @@ Enter them here (in any order).
 1. When possible, deliver the payer and payee codes to your clients using encrypted messaging such as PGP.
 
 2. Set limits beforehand as to the extent you'll intervene in someone else's dispute, and put it in writing.  When possible, deliver the codes to the
-    payer and payee together with the statement describing the limit of your willingness to intervene, including a maximum Groestlcoin amount if applicable.
+    payer and payee together with the statement describing the limit of your willingness to intervene, including a maximum Groestlcoin amount
+    if applicable.
 
 3. Set a policy to strongly discourage clients from reusing Escrow Invitation Codes as this can compromise the escrow protection.
 
