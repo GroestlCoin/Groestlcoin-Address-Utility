@@ -147,7 +147,7 @@ namespace BtcAddress {
         }
 
         private void MofNcalc_Load(object sender, EventArgs e) {
-//            MessageBox.Show("This feature is experimental, a proof of concept, and the key format will probably be revised heavily before this ever makes it into production.  Don't rely on it to secure large numbers of Bitcoins.  If you use it, " +
+//            MessageBox.Show("This feature is experimental, a proof of concept, and the key format will probably be revised heavily before this ever makes it into production.  Don't rely on it to secure large numbers of Groestlcoins.  If you use it, " +
 //                "make sure you keep a copy of this version of the utility in case the m-of-n format is changed before being accepted as any kind of standard.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
         }

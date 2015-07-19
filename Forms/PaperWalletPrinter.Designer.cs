@@ -65,7 +65,7 @@
 			this.btnSortKeys.Name = "btnSortKeys";
 			this.btnSortKeys.Size = new System.Drawing.Size(173, 36);
 			this.btnSortKeys.TabIndex = 11;
-			this.btnSortKeys.Text = "Sort the keys by Bitcoin address";
+			this.btnSortKeys.Text = "Sort the keys by Groestlcoin address";
 			this.btnSortKeys.UseVisualStyleBackColor = true;
 			// 
 			// btnPrintWallet
