@@ -27,7 +27,7 @@ Linux
 OS X
 ---------------------
 1. Download and install Mono for OS X:
-	http://www.mono-project.com/download/Install Mono
+	http://www.mono-project.com/download/
 
 2. Set Execution mode for file GrsAddress.exe:
 	chmod +x GrsAddress.exe
