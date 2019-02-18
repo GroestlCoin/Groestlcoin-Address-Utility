@@ -6,7 +6,7 @@ Unpack ZIP archive with 3 files:
 	GrsAddress.exe
 	BouncyCastle.Crypto.dll
 	ThoughtWorks.QRCode.dll
-
+Found here: https://github.com/Groestlcoin/Groestlcoin-Address-Utility/releases/download/v2.6/groestlcoin-address-utility.zip
 Windows
 -----------
 Just run GrsAddress.exe
